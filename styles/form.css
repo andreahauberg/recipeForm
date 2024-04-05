@@ -165,3 +165,10 @@ select {
 .form-group:focus-within span {
   color: rebeccapurple;
 }
+
+@supports (field-sizing: content) {
+  input,
+  textarea {
+    field-sizing: content;
+  }
+}

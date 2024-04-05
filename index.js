@@ -21,7 +21,8 @@ async function showRecipes() {
     clone.querySelector("[data-origin]").textContent = rec.origin;
     clone.querySelector("[data-serves]").textContent = rec.serves;
     clone.querySelector("[data-diet]").textContent = rec.diet;
-    clone.querySelector("[data-allergens]").textContent = rec.allergens;
+    clone.querySelector("[data-allergens]").textContent =
+      rec.allergens.join(", ");
     clone.querySelector("[data-ingredients]").textContent =
       rec.ingredients.join(", ");
     if (rec.studentFriendly) {
