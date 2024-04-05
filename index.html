@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Recipes.we</title>
+    <title>Recipe Form</title>
     <link rel="stylesheet" href="styles/index.css" />
   </head>
   <body>
@@ -18,13 +18,7 @@
             >Name
             <span class="hint">Enter the name of the recipe</span>
           </label>
-          <input
-            id="name"
-            type="text"
-            name="name"
-            required
-            autocomplete="off"
-          />
+          <input id="name" type="text" name="name" required />
         </div>
 
         <div class="form-group">
@@ -54,7 +48,13 @@
             Origin
             <span class="hint">Where is the recipe from?</span>
           </label>
-          <input type="text" id="origin" name="origin" list="countrylist" />
+          <input
+            type="text"
+            id="origin"
+            name="origin"
+            list="countrylist"
+            required
+          />
           <datalist id="countrylist"> </datalist>
         </div>
 
@@ -69,7 +69,7 @@
             Ingredients
             <span class="hint">Enter one ingredient per line</span>
           </label>
-          <textarea name="ingredients" id="ingredients"></textarea>
+          <textarea name="ingredients" id="ingredients" required></textarea>
         </div>
 
         <div class="form-group">
@@ -77,7 +77,7 @@
             Allergens
             <span class="hint">Enter one allergen per line</span>
           </label>
-          <textarea name="allergens" id="allergens"></textarea>
+          <textarea name="allergens" id="allergens" required></textarea>
         </div>
 
         <div role="group" aria-labelledby="is-alive" class="is-alive">

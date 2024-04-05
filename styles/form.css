@@ -44,7 +44,7 @@ label,
   font-size: 0.9rem;
   font-weight: 400;
   font-variation-settings: "wdth" 95;
-  margin-bottom: 0.5rem;
+  margin: 0.2rem 0;
 }
 
 /* Input and textarea styles */
@@ -61,7 +61,7 @@ select {
   border-radius: 4px;
   font-size: max(16px, 1rem);
   outline: none;
-  caret-color: hsl(302deg 40% 55%);
+  caret-color: rebeccapurple;
   resize: none;
   transition: 0.1s background;
   max-width: 20rem;
@@ -136,18 +136,32 @@ input[type="checkbox"]:checked::after {
   margin-top: 1rem;
 }
 
-/* input:invalid,
-textarea:invalid,
-select:invalid {
-  border: 2px solid red;
+input:not(#no, #yes):user-valid,
+textarea:user-valid,
+select:user-valid {
+  border-color: green;
 }
 
-.hint {
-  display: none;
+input:not(#no, #yes):user-invalid,
+textarea:user-invalid,
+select:user-invalid {
+  border-color: red;
 }
 
-input:invalid + .hint,
-textarea:invalid + .hint,
-select:invalid + .hint {
-  display: block;
-} */
+input:not(#no, #yes),
+textarea,
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  color: #212121;
+  border: 1px solid #21212133;
+  background: #f5f5f5;
+  padding: 8px 12px 10px;
+  border-radius: 4px;
+  outline: none;
+  caret-color: rebeccapurple;
+}
+
+.form-group:focus-within span {
+  color: rebeccapurple;
+}

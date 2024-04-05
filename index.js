@@ -52,7 +52,7 @@ function handleSubmit() {
   const form = document.querySelector("form");
   form.addEventListener("submit", async (e) => {
     console.log(e);
-    //stop refresh
+
     e.preventDefault();
     const formData = new FormData(form);
     console.log(formData.get("ingredients").split("\n"));
